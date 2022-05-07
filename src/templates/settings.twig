@@ -1,0 +1,26 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * One-click Payments plugin for Craft CMS 3.x
+ *
+ * One-click Payments Settings.twig
+ *
+ * @author    MadeByRaygun
+ * @copyright Copyright (c) 2022 MadeByRaygun
+ * @link      https://github.com/madebyraygun
+ * @package   OneclickPayments
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{% do view.registerAssetBundle("madebyraygun\\oneclickpayments\\assetbundles\\oneclickpayments\\OneclickPaymentsAsset") %}
+
+{{ forms.textField({
+    label: 'Some Field',
+    instructions: 'Enter some setting here.',
+    id: 'someAttribute',
+    name: 'someAttribute',
+    value: settings['someAttribute']})
+}}

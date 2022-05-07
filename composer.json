@@ -1,0 +1,39 @@
+{
+    "name": "madebyraygun/one-click-payments",
+    "description": "Payments plugin for Craft CMS using Formie and Stripe Checkout",
+    "type": "craft-plugin",
+    "version": "0.9.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "one-click payments"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Raygun",
+            "homepage": "https://github.com/madebyraygun"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0",
+        "verbb/formie": "^1.5.0",
+        "stripe/stripe-php": "^7.121"
+    },
+    "autoload": {
+        "psr-4": {
+            "madebyraygun\\oneclickpayments\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "One-click Payments",
+        "handle": "one-click-payments",
+        "developer": "Raygun",
+        "developerUrl": "https://madebyraygun.com",
+        "documentationUrl": "https://github.com/madebyraygun/one-click-payments#readme",
+        "changelogUrl": "https://github.com/madebyraygun/one-click-payments/blob/main/CHANGELOG.md",
+        "class": "madebyraygun\\oneclickpayments\\OneclickPayments"
+    }
+}
