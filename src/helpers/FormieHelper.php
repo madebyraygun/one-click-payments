@@ -9,7 +9,8 @@ class FormieHelper {
   public static function SetSubmissionStatus($submissionId, $status) {
     $submission = self::GetSubmission($submissionId);
     $status = Formie::$plugin->getStatuses()->getStatusByHandle($status);
-    if (!empty($status)) {
+    $prevStatus = $submission->getStatus();
+    if (!empty($status) && $prevStatus !== $status->handle) {
       $submission->setStatus($status);
       Craft::$app->getElements()->saveElement($submission, false);
       Formie::$plugin->getSubmissions()->sendNotifications($submission);
