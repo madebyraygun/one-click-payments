@@ -2,7 +2,7 @@
     "name": "madebyraygun/one-click-payments",
     "description": "Payments plugin for Craft CMS using Formie and Stripe Checkout",
     "type": "craft-plugin",
-    "version": "0.9.0",
+    "version": "0.9.1",
     "keywords": [
         "craft",
         "cms",
