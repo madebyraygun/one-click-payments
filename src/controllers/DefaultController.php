@@ -12,7 +12,7 @@ use craft\web\Controller;
 use Stripe\Webhook;
 
 class DefaultController extends Controller {
-  protected $allowAnonymous = ['index'];
+  protected array|int|bool $allowAnonymous = ['index'];
 
   public function __construct($id, $module, $config = []) {
     parent::__construct($id, $module, $config);

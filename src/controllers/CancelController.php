@@ -11,7 +11,7 @@ use craft\web\Controller;
 use craft\helpers\UrlHelper;
 
 class CancelController extends Controller {
-    protected $allowAnonymous = ['index'];
+    protected array|int|bool $allowAnonymous = ['index'];
 
     public function __construct($id, $module, $config = []) {
         parent::__construct($id, $module, $config);

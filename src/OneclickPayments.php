@@ -62,21 +62,21 @@ class OneclickPayments extends Plugin
      *
      * @var string
      */
-    public $schemaVersion = '1.0.0';
+    public string $schemaVersion = '1.0.0';
 
     /**
      * Set to `true` if the plugin should have a settings view in the control panel.
      *
      * @var bool
      */
-    public $hasCpSettings = false;
+    public bool $hasCpSettings = false;
 
     /**
      * Set to `true` if the plugin should have its own section (main nav item) in the control panel.
      *
      * @var bool
      */
-    public $hasCpSection = false;
+    public bool $hasCpSection = false;
 
     // Public Methods
     // =========================================================================
@@ -97,7 +97,7 @@ class OneclickPayments extends Plugin
         $this->hookFormieEvents();
     }
 
-    protected function createSettingsModel() {
+    protected function createSettingsModel(): ?\craft\base\Model {
         return new Settings();
     }
 
